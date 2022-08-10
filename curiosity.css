@@ -1,0 +1,11 @@
+.card-content-container .card .face.face.spotify {
+  position: relative;
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  color: #ffffff;
+  border: #fba60b solid 2px;
+  transform: translateY(100px);
+}

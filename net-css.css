@@ -1,0 +1,344 @@
+body {
+  overflow-x: hidden;
+  font-family: Sans-Serif;
+  margin: 0;
+  background-color: #000000;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #000000;
+  color: #000000;
+  padding: 20px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.menu-logo {
+  line-height: 0;
+  margin: 0 20px;
+}
+
+.menu-logo img {
+  max-height: 70px;
+  width: 70%;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.menu-container a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+.menu-container a:hover {
+  color: #d00a0a;
+}
+
+.menu-container input {
+  display: block;
+  width: 35px;
+  height: 25px;
+  margin: 0;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/* Burger menu */
+.menu-container span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-top: 5px;
+  position: relative;
+  background: #fffefe;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.menu-container span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.menu-container span:nth-child(3) {
+  transform-origin: 0% 100%;
+}
+
+.menu-container input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(3px, -1px);
+  background: #232323;
+}
+
+.menu-container input:checked ~ span:nth-child(4) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-container input:checked ~ span:nth-child(3) {
+  transform: rotate(-45deg) translate(-5px, 11px);
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 767px) {
+  .menu-container {
+    flex-direction: column;
+    align-items: flex-end;
+    top: 0;
+    z-index: 2;
+    transform: translateY(40%);
+  }
+
+  .menu-logo {
+    position: absolute;
+    left: 10px;
+    top: 60%;
+    transform: translateY(-50%);
+  }
+
+  .menu-logo img {
+    max-height: 40px;
+  }
+
+  .menu {
+    position: absolute;
+    box-sizing: border-box;
+    width: 300px;
+    right: -300px;
+    top: 0;
+    margin: -20px;
+    padding: 75px 50px 50px;
+    background: #fffefe;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translateX(0%);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  .menu-container input:checked ~ .menu {
+    transform: translateX(-100%);
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 768px) {
+  .menu-container {
+    width: 100%;
+  }
+
+  .menu-container a {
+    color: #fffefe;
+  }
+
+  .menu-container input {
+    display: none;
+  }
+
+  /* Burger menu */
+  .menu-container span {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    color: #000000;
+  }
+
+  .menu ul {
+    display: flex;
+    padding: 0;
+    color: #000000;
+  }
+
+  .menu li {
+    padding: 0 20px;
+    color: #000000;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.card-content-container-parent {
+  margin: 0;
+  padding: 0;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: consolas;
+}
+.card-content-container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-content-container .card {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.card-content-container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.card-content-container .card .face.face1 {
+  position: relative;
+  background: #0e0e0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  color: #ffffff;
+  border: #ff0018 solid 2px;
+  transform: translateY(100px);
+}
+.card-content-container .card:hover .face.face1 {
+  background: #ff0018;
+  transform: translateY(0);
+}
+.card-content-container .card:hover .face.netflix {
+  background: #ff0018;
+  transform: translateY(0);
+}
+.card-content-container .card:hover .face.spotify {
+  background: #fba60b;
+  transform: translateY(0);
+}
+.card-content-container .card .face.face1 .card-content {
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.card-content-container .card:hover .face.face1 .card-content {
+  opacity: 1;
+}
+
+.card-content-container .card .face.face1 .card-content img {
+  max-width: 100px;
+}
+
+.card-content-container .card .face.face1 .card-content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  font-family: "roboto", sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
+
+.card-content-container .card .face.face2 {
+  position: relative;
+  background: #161616;
+  color: #ffffff;
+  display: flex;
+  font-size: 25px;
+  font-family: "roboto", sans-serif;
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.card-content-container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.card-content-container .card .face.face2 .card-content p {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.card-content-container .card .face.face2 .card-content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
+  padding: 5px;
+  border: 1px solid #333;
+}
+.card-content-container .card .face.face2 .card-content .netflix-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
+  padding: 5px;
+  background: #ff0018;
+  border: 1px solid #333;
+}
+.card-content-container .card .face.face2 .card-content .netflix-btn {
+  font-size: 20px;
+  background: #ff0018;
+}
+.card-content-container .card .face.face2 .card-content .spotify-btn {
+  font-size: 20px;
+  background: #fba60b;
+}
+.card-content-container .card .face.face2 .card-content a:hover {
+  background: #333;
+  color: #fff;
+}
+@media screen and (max-width: 930px) {
+  .card-content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.detail-text {
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "roboto", sans-serif;
+  font-weight: 300;
+  margin-top: 180px;
+  margin-left: 150px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (min-width: 360px) {
+  .card-content-container {
+    margin-left: 20px;
+  }
+}
