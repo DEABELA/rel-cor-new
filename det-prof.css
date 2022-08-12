@@ -187,6 +187,9 @@ html {
     color: #000000;
   }
 }
+#curiosity-menu :hover {
+  color: #fba60b;
+}
 .card {
   padding-left: 10px;
 }
@@ -413,7 +416,7 @@ html {
   background-color: #000000;
   padding: 15px 50px;
   color: #ffffff;
-  max-width: 150px;
+  max-width: 200px;
   margin: 20px 30px;
   right: 0;
   max-height: 250px;
