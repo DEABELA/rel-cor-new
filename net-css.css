@@ -1,11 +1,12 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
   font-family: Sans-Serif;
   margin: 0;
   background-color: #000000;
-}
-html {
-  scroll-behavior: smooth;
 }
 
 .menu-container {
@@ -337,8 +338,14 @@ html {
   position: relative;
   z-index: 1;
 }
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 384px) and (max-width: 480px) {
   .card-content-container {
-    margin-left: 20px;
+    margin-left: 12%;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 375px) {
+  .card-content-container {
+    align-items: center;
+    margin-left: 6.5%;
   }
 }

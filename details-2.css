@@ -1,11 +1,12 @@
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 body {
   overflow-x: hidden;
   font-family: Sans-Serif;
   margin: 0;
   background-color: #000000;
-}
-html {
-  scroll-behavior: smooth;
 }
 .card {
   padding-left: 10px;
