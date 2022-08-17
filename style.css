@@ -263,7 +263,8 @@ body {
   margin-top: -426px;
 }
 .packages {
-  padding-top: 200px;
+  padding-top: 400px;
+  max-height: 100vh;
   padding-bottom: 200px;
 }
 
@@ -308,6 +309,9 @@ body {
   .landing-sec {
     max-height: 100vh;
   }
+  .alt-img {
+    margin-top: 10px;
+  }
 }
 .landing-sec {
   padding-bottom: 150px;
@@ -317,15 +321,30 @@ body {
   .landing-sec {
     max-height: 100vh;
   }
+  .landing-text {
+    margin-left: 0px;
+    z-index: 1;
+  }
 
   .alt-img {
     position: relative;
     width: 100%;
-    margin-left: 330px;
-    scale: 1.5;
+    margin-top: 80px;
+    margin-left: 180px;
+    scale: 1.7;
     z-index: 0;
   }
   .alt-img img {
     width: 100%;
+  }
+}
+@media screen and (min-width: 360px) and (min-height: 800px) {
+  .alt-img {
+    padding-top: 8%;
+  }
+}
+@media screen and (min-width: 414px) and (max-height: 736px) {
+  .alt-img {
+    margin-top: -100px;
   }
 }
