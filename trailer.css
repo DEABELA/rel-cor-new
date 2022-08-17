@@ -216,6 +216,10 @@ body {
     flex-direction: column;
     width: 60%;
   }
+  .play-button {
+    margin-right: 180px;
+    scale: 0.8;
+  }
   .cards {
     margin-left: 20px;
   }
