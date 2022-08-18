@@ -327,6 +327,9 @@ body {
     margin-left: 0px;
     z-index: 1;
   }
+  .menu-logo img {
+    scale: 0.8;
+  }
 
   .alt-img {
     position: relative;
