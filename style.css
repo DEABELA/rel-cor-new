@@ -328,7 +328,7 @@ body {
     z-index: 1;
   }
   .menu-logo img {
-    scale: 0.8;
+    max-width: 40px;
   }
 
   .alt-img {
