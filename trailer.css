@@ -17,7 +17,9 @@ body {
 }
 
 .roll-up {
+  padding-top: 3px;
   overflow: hidden;
+  margin-left: -100px;
   position: relative;
 }
 
@@ -209,23 +211,42 @@ body {
 .cards:hover .text-reveal > span:nth-child(2) > span > span {
   transform: translateX(0);
 }
+
+.mobile-text {
+  display: none;
+}
 @media screen and (min-width: 360px) and (max-width: 428px) {
   .wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 60%;
+    width: 73%;
   }
-  .play-button {
-    margin-right: 180px;
-    scale: 0.8;
+
+  .fullscreen-text {
+    display: none;
   }
   .cards {
     margin-left: 20px;
   }
+
   .coming-soon {
     font-size: 1.2em;
     text-align: center;
+  }
+
+  .mobile-text {
+    display: block;
+  }
+  .mobile-text h3 {
+    position: relative;
+    padding-right: 180px;
+    width: 30ch;
+    margin-bottom: -90px;
+  }
+
+  .mobile-text p {
+    display: none;
   }
 }
 
