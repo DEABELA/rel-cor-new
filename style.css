@@ -219,6 +219,16 @@ body {
   background-color: #d00a0a;
   color: #ffffff;
 }
+.landing-img-img2 {
+  display: none;
+  width: 45%;
+  height: 45%;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  margin-left: 400px;
+  position: relative;
+  z-index: 1;
+}
 .landing-img-img {
   width: 45%;
   height: 45%;
@@ -344,5 +354,16 @@ body {
 @media screen and (min-width: 414px) and (max-height: 736px) {
   .alt-img {
     margin-top: -100px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1240px) {
+  .landing-img-img2 {
+    display: block;
+  }
+  .white-bg {
+    display: none;
+  }
+  .landing-text {
+    margin-left: 60px;
   }
 }

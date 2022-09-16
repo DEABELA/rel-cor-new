@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-body {
-  line-height: 1.5;
-  font-family: "Poppins", sans-serif;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .container {
   max-width: 1170px;
   margin: auto;
@@ -20,8 +11,8 @@ ul {
   list-style: none;
 }
 .footer {
-  background-color: #24262b;
-  padding: 70px 0;
+  background-color: #181818;
+  padding: 20px 0px 20px 0px;
 }
 .footer-col {
   width: 25%;
@@ -90,4 +81,21 @@ ul {
   .footer-col {
     width: 100%;
   }
+}
+@media (min-width: 574px) {
+  .row {
+    flex-wrap: nowrap;
+  }
+}
+#follow-us h5 {
+  color: #bbbbbb;
+}
+#deabela {
+  color: aquamarine;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.phone-number {
+  color: #ffffff;
+  font-size: 0.9em;
 }
